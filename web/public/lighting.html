@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Webpage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Comfortaa', cursive;
+            background-image: url("w2.jpg");
+            background-repeat: no-repeat;
+            background-size:auto;    }
+    .nav-link:hover{
+      font-weight: bold; color:#ffffff; border-radius: 20px; border-width: 5px; border-color: #ffffff;
+    }
+    .btn {
+      color: #ffffff;
+      border-radius: 50px;
+      border-color: rgb(173, 188, 215);
+      padding: 10px 20px;
+      margin-right: 10px;
+    }
+    .btn:hover {
+      background-color: #fff;
+      color: #000;
+    }
+    .container-custom {
+      margin: 50px;
+      display: flex;
+      justify-content: center;
+      background-color: transparent;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px 0px #bfbfbf;
+        margin-left: 600px;
+        margin-top: 10px;
+        max-width: 500px;
+    }
+    table {
+      max-width: 100%;
+    }
+    .navbar {
+        background-color: transparent !important;
+    }
+    h1 {
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+ 
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-transparent">
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav" style="margin-top: 20px;">
+		  <ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+        <a class="btn" href="/">Home</a>
+			</li>
+      
+      <li class="nav-item">
+        <a class="btn" href="/m_dev">Monitor</a>
+			</li>
+			<li class="nav-item">
+        <a class="btn" href="/a_d">Add Device</a>
+			</li>
+			<li class="nav-item">
+        <a class="btn" href="/rem_Dev">Remove Device</a>
+			</li>
+			<li class="nav-item">
+        <a class="btn" href="/lighting">Lighting</a>
+			</li>
+      
+		  </ul>
+		</div>
+  </nav>
+  <h1 style="color: #ffffff; margin-top: 100px;">Lighting</h1>
+
+  <div class="container-fluid container-custom">
+    <div>
+      <table id="lighting_devices_list" class="table table-borderless">
+        <thead>
+          <tr>
+            <th style="color: #ffffff;">Name</th>
+            <th style="color: #ffffff;">Room</th>
+            <th style="color: #ffffff;">Floor</th>
+            <th style="color: #ffffff;">Status</th>
+          </tr>
+        </thead>
+        
+      </table>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

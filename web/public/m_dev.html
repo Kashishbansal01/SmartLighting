@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Select Device</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<style>
+		body {
+			font-family: 'Comfortaa', cursive;
+            background-image: url("w2.jpg");
+            background-repeat: no-repeat;
+			background-size:auto;		}
+		h2 {
+			margin-top: 0;
+		}
+		.navbar {
+        background-color: transparent !important;
+    }
+		.form-container {
+            background-color: transparent;
+        padding: 20px;
+        
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px 0px #bfbfbf;
+        max-width: 400px;
+        margin-left: 100px;
+        
+        margin-top: 150px;
+        margin-bottom: 10px;
+        height: 70vh;
+		}
+		.data-container {
+			margin-right: 20px;
+            background-color: transparent;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px 0px #bfbfbf;
+        max-width: 800px;
+        margin-top: 150px;
+        margin-left: 180px;
+        margin-bottom: 10px;
+        height: 70vh;
+		}
+		.form-container, .data-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			
+		}
+		.nav-link:hover{
+      font-weight: bold; color:#ffffff; border-radius: 20px; border-width: 5px; border-color: #ffffff;
+    }
+    .btn {
+      color: #ffffff;
+      border-radius: 50px;
+      border-color: rgb(173, 188, 215);
+      padding: 10px 20px;
+      margin-right: 10px;
+    }
+    .btn:hover {
+      background-color: #fff;
+      color: #000;
+    }
+		form {
+			margin-bottom: 20px;
+		}
+	
+		.graph {
+			height: 200px;
+			margin-top: 20px;
+			background-color: #f2f2f2;
+			border: 1px solid #ccc;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		
+	</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-transparent">
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav" style="margin-top: 20px;">
+		  <ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+        <a class="btn" href="/">Home</a>
+			</li>
+      
+      <li class="nav-item">
+        <a class="btn" href="/m_dev">Monitor</a>
+			</li>
+			<li class="nav-item">
+        <a class="btn" href="/a_d">Add Device</a>
+			</li>
+			<li class="nav-item">
+        <a class="btn" href="/rem_Dev">Remove Device</a>
+			</li>
+			<li class="nav-item">
+        <a class="btn" href="/lighting">Lighting</a>
+			</li>
+      
+		  </ul>
+		</div>
+	  </nav>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6 form-container">
+				<h2 style="margin-bottom: 30px; color: #ffffff;">Select Device</h2>
+				<form>
+					<label style="color: #ffffff;">Type of Device:</label>
+					<select id="dev_dev_ty" class="form-control" name="deviceType">
+						<option value="1">Lighting Device</option>
+						<option value="2">Air-Conditioning Device</option>
+						<option value="3">Security</option> Device</option>
+					</select>
+					<br>
+					<label style="color: #ffffff;">Floor Number:</label>
+					<select id="dev_dev_floor" class="form-control" name="floorNumber">
+						<option value="">--Select--</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+					<br>
+					<label style="color: #ffffff;">Room Number:</label>
+					<select id="dev_dev_r" class="form-control" name="roomNumber">
+						
+					</select>
+					<br>
+					<label style="color: #ffffff;">Device:</label>
+					<select id="dev_dev_device" class="form-control" name="device">
+						
+					</select>
+					<br>
+					<button id="dev_dev_btn" type="button"  class="btn" >Show Data</button>
+					<button  class="btn" onclick="goBack()">Go Back</button>
+				</form>
+			</div>
+			<div class="col-md-6 data-container">
+				<div id="data_container"></div>
+				<div id="graph" class="graph"></div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function showData() {
+			var dataContainer = document.getElementById("dataContainer");
+			dataContainer.innerHTML = "<h2>Device Data</h2><label>Data 1:</label><br><label>Data 2:</label><br><label>Data 3:</label><br><label>Data 4:</label><br><label>Data 5:</label><br><br><div id='graph'></div>";
+		}
+
+		function goBack() {
+			window.location.reload();
+		}
+	</script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min"></script>
+	<script src="https://code.highcharts.com/highcharts.js" crossorigin="anonymous"></script>
+	<script src="app.js"></script>
+    </body>
+    </html>
+
